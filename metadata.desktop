@@ -1,0 +1,12 @@
+[SddmGreeterTheme]
+Name=Cutefish
+Description=CutefishOS SDDM theme
+Type=sddm-theme
+Author=CutefishOS contributors
+License=GPL
+Version=0.5
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=cutefish
+Theme-API=2.0
+QtVersion=6

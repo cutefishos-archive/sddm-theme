@@ -17,14 +17,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.12
-import QtQuick.Window 2.12
-import QtQuick.Controls 2.12 as QQC2
-import QtQuick.Layouts 1.12
-import QtGraphicalEffects 1.0
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
 
-import Cutefish.Accounts 1.0 as Accounts
-import Cutefish.System 1.0 as System
 import FishUI 1.0 as FishUI
 
 import SddmComponents 2.0
@@ -235,6 +233,7 @@ Item {
     }
 
     Item {
+        id: powerButtonArea
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         anchors.rightMargin: FishUI.Units.largeSpacing
@@ -250,32 +249,34 @@ Item {
             height: 50 + FishUI.Units.largeSpacing
 
             size: 50
-            source: "system-shutdown-symbolic.svg"
+            source: Qt.resolvedUrl("system-shutdown-symbolic.svg")
             iconMargins: FishUI.Units.largeSpacing
 
             // anchors.top: message.bottom
             // anchors.topMargin: FishUI.Units.largeSpacing
             // anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: actionMenu.popup()
+            onClicked: actionMenu.popup(powerButtonArea,
+                                        powerButtonArea.width - actionMenu.implicitWidth,
+                                        -actionMenu.implicitHeight)
         }
     }
 
-    FishUIMenu {
+    FishUI.Menu {
         id: actionMenu
 
-        QQC2.MenuItem {
+        FishUI.MenuItem {
             text: qsTr("Suspend")
             onClicked: sddm.suspend()
             visible: sddm.canSuspend
         }
 
-        QQC2.MenuItem {
+        FishUI.MenuItem {
             text: qsTr("Reboot")
             onClicked: sddm.reboot()
             visible: sddm.canReboot
         }
 
-        QQC2.MenuItem {
+        FishUI.MenuItem {
             text: qsTr("Shutdown")
             onClicked: sddm.powerOff()
             visible: sddm.canPowerOff

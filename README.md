@@ -6,7 +6,7 @@
 
 For Debian:
 ```shell
-apt install build-essential cmake extra-cmake-modules qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qttools5-dev qttools5-dev-tools
+apt install build-essential cmake qt6-base-dev qt6-declarative-dev qt6-tools-dev qt6-tools-dev-tools qml6-module-qt5compat-graphicaleffects
 ```
 
 Build:

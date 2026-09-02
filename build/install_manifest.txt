@@ -1,0 +1,8 @@
+/usr/share/sddm/themes/cutefish/Main.qml
+/usr/share/sddm/themes/cutefish/SessionMenu.qml
+/usr/share/sddm/themes/cutefish/UserView.qml
+/usr/share/sddm/themes/cutefish/system-shutdown-symbolic.svg
+/usr/share/sddm/themes/cutefish/metadata.desktop
+/usr/share/sddm/themes/cutefish/theme.conf
+/etc/sddm.conf.d/hidpi.conf
+/etc/sddm.conf
