@@ -42,8 +42,8 @@ Item {
         id: wallpaperImage
         anchors.fill: parent
         source: "file://" + "/usr/share/backgrounds/cutefishos/default.jpg"
-        sourceSize: Qt.size(width * Screen.devicePixelRatio,
-                            height * Screen.devicePixelRatio)
+        sourceSize: Qt.size(width * FishUI.Dpi.ratio,
+                            height * FishUI.Dpi.ratio)
         fillMode: Image.PreserveAspectCrop
         asynchronous: false
         clip: true
